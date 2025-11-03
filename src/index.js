@@ -341,6 +341,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+//Middleware to route requests
 app.use('/api/departments', departmentRoutes);
 app.use('/api/roles', roleRoutes);
 app.use('/api/staff', staffRoutes);
@@ -376,7 +377,12 @@ app.get("/tasks", (req, res) => {
   res.json(tasks); // 👈 Return an array, not an object
 });
 
+//Test route
+app.get('/', (req, res) => {
+  res.send('Welcome to MK_JEWELS Backend!');
+});
+
 const PORT = 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}, Backend is Live!`));
 
 
