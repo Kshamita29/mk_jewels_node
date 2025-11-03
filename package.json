@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "MK One APIs",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "npm start"
   },
   "author": "",
   "license": "ISC",
