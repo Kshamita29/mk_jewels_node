@@ -4,6 +4,7 @@ import cors from 'cors';
 import departmentRoutes from './routes/departmentRoutes.js';
 import roleRoutes from './routes/roleRoutes.js';
 import staffRoutes from './routes/staffRoutes.js';
+import taskRoutes from './routes/taskRoutes.js';
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 app.use('/api/departments', departmentRoutes);
 app.use('/api/roles', roleRoutes);
 app.use('/api/staff', staffRoutes);
+app.use('/api/tasks', taskRoutes);
 
 // Example Tasks Route
 app.get('/tasks', (req, res) => {
