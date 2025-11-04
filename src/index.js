@@ -9,11 +9,9 @@ const app = express();
 
 // ---------- MIDDLEWARE ----------
 const corsOptions = {
-  origin: [
-    "https://mk-jewels-node-lfdr9xr5j-kshamita29s-projects.vercel.app",
-    "https://legendary-fishstick-pq5vjj7945x36w4w-3000.app.github.dev"
-  ],
+  origin:"*",
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 };
 
 app.use(cors(corsOptions));
